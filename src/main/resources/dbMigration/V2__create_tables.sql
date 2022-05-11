@@ -31,15 +31,3 @@ CREATE TABLE Usuario
      sexo            TEXT NOT NULL,
      PRIMARY KEY (idUser)
   );
-
-ALTER TABLE Evento
-ADD CONSTRAINT fk_idOrganizador FOREIGN KEY (idOrganizador) REFERENCES Usuario(idUser);
-
-ALTER TABLE Evento
-ADD CONSTRAINT fk_idHomenageado FOREIGN KEY (idHomenageado) REFERENCES Usuario(idUser);
-
-ALTER TABLE Video
-ADD CONSTRAINT fk_idEvento FOREIGN KEY (idEvento) REFERENCES Evento(idEvento);
-
-ALTER TABLE Video
-ADD CONSTRAINT fk_idSender FOREIGN KEY (idSender) REFERENCES Usuario(idUser);
